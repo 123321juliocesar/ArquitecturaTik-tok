@@ -1,6 +1,6 @@
 # ArquitecturaTik-tok
 
-##integrantes y Roles: 
+##Integrantes y Roles: 
 
 1. Julio Cesar gonzales Castillo  (arquitecto de software) 
 2. Lilit Ameli Gutierrez Pancorbo (arquitecto de soluciones)
