@@ -6,17 +6,17 @@
 
 TikTok es exitosa principalmente porque permite que los usuarios vean videos de manera rápida y fluida, incluso cuando existe una gran cantidad de usuarios conectados simultáneamente. Además, puede crecer y soportar enormes cantidades de contenido, usuarios e interacciones sin que el servicio deje de funcionar.
 
-Por ello, los dos atributos de calidad que mejor explican su éxito son:
+Por ello, los dos atributos de calidad que mejor quiza destacan su éxito son:
 
----
+
 
 # 01. Atributos de calidad
 
-## Atributo 1: Rendimiento (Performance)
+## Atributo 1: Rendimiento 
 
 ### Justificación
 
-TikTok necesita entregar videos y responder a las acciones del usuario en muy poco tiempo. Cuando una persona abre la aplicación, espera que el siguiente video aparezca rápidamente al deslizar la pantalla.
+TikTok entrega videos y responde a las acciones del usuario en muy poco tiempo. Cuando una persona abre la aplicación, espera que el siguiente video aparezca rápidamente al deslizar la pantalla.
 
 Por ejemplo, acciones como:
 
@@ -27,7 +27,7 @@ Por ejemplo, acciones como:
 - Compartir.
 - Cargar recomendaciones.
 
-deben ejecutarse con baja latencia.
+deben ejecutarse con baja latencia por al deslizar ya debe aparecer el video siguiente.
 
 ### ¿Cómo contribuye al éxito?
 
@@ -35,7 +35,7 @@ Un buen rendimiento permite que el usuario tenga una experiencia fluida y no aba
 
 ### Indicador medible
 
-Latencia de carga/reproducción inicial del video, por ejemplo, **≤ 2 segundos en el 95 % de las solicitudes**.
+Latencia de carga y reproducción inicial del video.
 
 ---
 
@@ -74,7 +74,7 @@ Un problema plausible para TikTok sería que una gran cantidad de usuarios inten
 | **5. Respuesta** | El sistema solicita, procesa y entrega el video utilizando los recursos disponibles |
 | **6. Medida de respuesta** | El video debe comenzar a reproducirse en **≤ 2 segundos** en al menos el **95 % de las solicitudes** |
 
-### Escenario redactado
+### Escenario
 
 Durante una hora de alta demanda, cuando un usuario desliza hacia el siguiente video, el sistema de reproducción de TikTok deberá entregar el contenido y comenzar su reproducción en un máximo de **2 segundos** en al menos el **95 % de las solicitudes**, evitando interrupciones perceptibles para el usuario.
 
@@ -116,9 +116,9 @@ Esto genera una carga mucho mayor que la habitual.
 | **5. Respuesta** | El sistema incrementa dinámicamente sus recursos para atender la demanda |
 | **6. Medida de respuesta** | Debe soportar un aumento de hasta **10 veces la carga normal**, manteniendo la latencia del video en **≤ 2 segundos** en el **95 % de las solicitudes** |
 
-### Escenario redactado
+### Escenario 
 
-Cuando un video se vuelva viral y la cantidad de solicitudes de reproducción aumente hasta **10 veces** respecto a la carga normal, la plataforma deberá incrementar dinámicamente su capacidad de procesamiento y distribución, manteniendo el inicio de reproducción en **≤ 2 segundos** para al menos el **95 % de las solicitudes**.
+Cuando un video se vuelva viral y la cantidad de solicitudes de reproducción aumente hasta 10 veces respecto a la carga normal, la plataforma deberá incrementar dinámicamente su capacidad de procesamiento y distribución, manteniendo el inicio de reproducción en ≤ 2 segundos para al menos el 95 % de las solicitudes.
 
 ### Atributo evaluado
 
@@ -152,14 +152,14 @@ Por esta razón, la arquitectura necesita distribuir el contenido y permitir aum
 Se decide utilizar una arquitectura distribuida basada en:
 
 - Múltiples servidores/regiones.
-- **CDN (Content Delivery Network)**.
+- CDN 
 - Escalamiento automático.
 
 La CDN permite almacenar temporalmente contenido popular cerca de los usuarios, mientras que el escalamiento automático permite agregar recursos cuando aumenta la demanda.
 
 ### Funcionamiento simplificado
 
-```text
+text
 Usuario
   ↓
 CDN cercana
@@ -169,15 +169,13 @@ Servidor de aplicación
 Servicios de TikTok
   ↓
 Almacenamiento de videos
-```
+
 
 Cuando aumenta la demanda:
 
-```text
+text
 Más usuarios → mayor carga → escalamiento automático → más recursos disponibles
-```
 
----
 
 # Consecuencias
 
@@ -237,8 +235,6 @@ Se necesitan herramientas de monitoreo, automatización y administración de mú
 | **ADR** | Arquitectura distribuida + CDN + escalamiento automático |
 | **Trade-offs** | Mayor rendimiento y escalabilidad, pero mayor costo, complejidad y dificultad de administración |
 
----
 
-# Conclusión para exponer
 
-TikTok es exitosa porque ofrece una experiencia rápida y puede atender grandes cantidades de usuarios. Esto se relaciona directamente con los atributos de **rendimiento** y **escalabilidad**. Para lograrlo, una arquitectura distribuida con **CDN** y **escalamiento automático** permite reducir la latencia y aumentar la capacidad cuando existe una alta demanda. Sin embargo, esta decisión también genera *trade-offs*, como mayor costo y complejidad arquitectónica.
+
