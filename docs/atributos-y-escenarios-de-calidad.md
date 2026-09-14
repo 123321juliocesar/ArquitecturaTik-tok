@@ -1,6 +1,5 @@
 # TikTok: atributos y escenarios de calidad
 
-Documento académico para los puntos 1 y 2 de la actividad «De la historia de éxito al escenario de calidad». Las cifras de los escenarios son **metas propuestas para el ejercicio**, no métricas oficiales de TikTok.
 
 ## 1. ¿Qué atributos de calidad sostienen su éxito?
 
@@ -44,6 +43,3 @@ Se sigue el orden de la diapositiva: **fuente del estímulo, estímulo, artefact
 | 5. Respuesta | La capa de distribución sirve el archivo desde caché y se amplía la capacidad del servicio de metadatos, manteniendo disponibles los demás videos. |
 | 6. Medida de respuesta | En una prueba con demanda 5×, la capacidad adicional se habilita en ≤ 5 minutos; durante el pico, latencia p95 ≤ 700 ms para metadatos y al menos 99 % de respuestas sin error del servidor. |
 
-## Cómo evaluar los escenarios
-
-Se necesitaría una implementación o simulación de la arquitectura propuesta y una prueba de carga que reproduzca las condiciones indicadas. Las medidas permitirían decidir si el diseño cumple o si necesita cambios; este repositorio no afirma haber ejecutado esas pruebas.
