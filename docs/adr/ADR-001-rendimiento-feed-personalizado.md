@@ -2,7 +2,7 @@
 
 **Estado:** Propuesto  
 **Fecha:** 2026-09-16  
-**Decisores:** Julio Cesar Gonzales Castillo, Lilit Ameli Gutierrez Pancorbo, Luz Marina Apaza Gomes y José Antonio Chavez Gomez  
+**Decisores:** Julio Cesar Gonzales Castillo, Lilit Ameli Gutierrez Pancorbo, Luz Marina Apaza Gomes, Mildrely Laime Cervantes y José Antonio Chavez Gomez  
 **Contexto técnico relacionado:** TikTok — API del feed «Para ti» y servicio de recomendación
 
 ---
